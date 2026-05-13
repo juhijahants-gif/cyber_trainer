@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | Cyber Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>🔐 Cybersecurity Quiz</h1>
+
+<div class="box">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <input name="username" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<div class="box">
+    <h2>Register</h2>
+    <form action="/register" method="POST">
+        <input name="username" placeholder="New Username" required>
+        <input name="password" type="password" placeholder="New Password" required>
+        <button type="submit">Register</button>
+    </form>
+</div>
+<footer class="footer">
+    <p> Created By JUHI JAHAN T S</p>
+    <p>© 2026 Cyber Trainer | Keep Learning 🔐 Stay Secure</p>
+</footer>
+
+</body>
+</html>

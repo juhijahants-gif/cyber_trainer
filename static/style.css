@@ -1,0 +1,191 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #000000, #050505, #000000);
+    color: cyan;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+/* ================= HEADINGS ================= */
+h1, h2, h3 {
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+/* ================= CONTAINERS ================= */
+.box {
+    border: 1px solid cyan;
+    box-shadow: 0 0 20px cyan;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* ================= INPUT ================= */
+input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    background: black;
+    color: cyan;
+    border: 1px solid cyan;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 10px cyan;
+}
+
+/* ================= BUTTON ================= */
+button {
+    padding: 10px 15px;
+    background: black;
+    color: cyan;
+    border: 1px solid cyan;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px cyan;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* ================= LINKS ================= */
+a {
+    color: cyan;
+    text-decoration: none;
+    border: 1px solid cyan;
+    padding: 8px 15px;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 0 10px cyan;
+    border-radius: 5px;
+}
+
+a:hover {
+    background: cyan;
+    color: black;
+}
+
+/* ================= QUIZ ================= */
+#quiz {
+    margin-top: 30px;
+}
+
+/* ================= TIMER ================= */
+#timer {
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* ================= PROGRESS BAR ================= */
+#progress {
+    width: 0%;
+    height: 25px;
+    background: linear-gradient(90deg, cyan, #00ffff);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px cyan;
+    transition: width 0.5s ease;
+    color: black;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+/* ================= TABLE (LEADERBOARD) ================= */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 60%;
+    box-shadow: 0 0 20px cyan;
+}
+
+th, td {
+    border: 1px solid cyan;
+    padding: 10px;
+}
+
+th {
+    background: cyan;
+    color: black;
+}
+
+tr:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+/* ================= GLOW ANIMATION ================= */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px cyan; }
+    50% { box-shadow: 0 0 20px cyan; }
+    100% { box-shadow: 0 0 5px cyan; }
+}
+
+.box, button, a {
+    animation: glow 2s infinite alternate;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    .box {
+        width: 90%;
+    }
+
+    table {
+        width: 90%;
+    }
+}
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Correct Answer Glow */
+.correct {
+    background: #00ffcc !important;
+    color: black;
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+}
+
+/* ❌ Wrong Answer Glow */
+.wrong {
+    background: #ff4d4d !important;
+    color: white;
+    box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d;
+}
+/* 🌐 Footer Styling */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    background: #000;
+    color: #00ffff;
+    font-size: 14px;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
+body {
+    padding-bottom: 60px;
+}

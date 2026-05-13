@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2 id="timer">Time: 30</h2>
+<div id="progress"></div>
+<div id="quiz"></div>
+
+<!-- Sounds -->
+<audio id="correctSound" src="{{ url_for('static', filename='sounds/correct.mp3') }}"></audio>
+<audio id="wrongSound" src="{{ url_for('static', filename='sounds/wrong.mp3') }}"></audio>
+
+<!-- ✅ IMPORTANT: Flask → JS -->
+<script>
+let questions = {{ questions | tojson }};
+console.log("Questions:", questions);
+</script>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<footer class="footer">
+    <p> Created By JUHI JAHAN T S</p>
+    <p>© 2026 Cyber Trainer | Keep Learning 🔐 Stay Secure</p>
+</footer>
+</body>
+</html>

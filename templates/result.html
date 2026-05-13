@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>{{ name }} Score: {{ score }} / {{ total }}</h1>
+
+<form action="/certificate" method="POST">
+    <input type="hidden" name="name" value="{{ name }}">
+    <input type="hidden" name="score" value="{{ score }}">
+    <button type="submit">Download Certificate</button>
+</form>
+
+<br>
+
+<a href="/"><button>Play Again</button></a>
+<footer class="footer">
+    <p> Created By JUHI JAHAN T S</p>
+    <p>© 2026 Cyber Trainer | Keep Learning 🔐 Stay Secure</p>
+</footer>
+</body>
+</html>

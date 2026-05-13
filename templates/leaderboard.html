@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">   
+</head>
+<body>
+
+<h1>🏆 Leaderboard</h1>
+
+<table>
+    <tr>
+        <th>Rank</th>
+        <th>User</th>
+        <th>Score</th>
+    </tr>
+
+    {% for user, score in data %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ user }}</td>
+        <td>{{ score }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/index">⬅ Back to Game</a>
+<footer class="footer">
+    <p> Created By JUHI JAHAN T S</p>
+    <p>© 2026 Cyber Trainer | Keep Learning 🔐 Stay Secure</p>
+</footer>
+
+</body>
+</html>
